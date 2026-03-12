@@ -37,6 +37,7 @@ a{
     display: flex;
     justify-content: center;
     align-items: center;
+    
 }
 .profile-card::after{
     content: "";
@@ -85,25 +86,54 @@ a{
     display: block;
     margin: 0 auto;
     border-radius: 10px;
-}
+        opacity: 0;
+        transform: scale(0.8);
+        filter: brightness(0.7);
+        transition: 
+        opacity 1.2s ease,
+        transform 1.2s ease,
+        filter 1.2s ease,
+        box-shadow 1.2s ease;
+        opacity: 1;
+        transform: scale(1);
+        filter: brightness(1.2);
+        box-shadow: 
+          0 0 15px rgba(255, 255, 255, 0.6),
+          0 0 30px rgba(255, 255, 255, 0.4),
+          0 0 60px rgba(255, 255, 255, 0.2);
+      }
+      
+      .img img.show {
+        opacity: 1;
+        transform: scale(1);
+        filter: brightness(1.2);
+        box-shadow: 
+          0 0 15px rgba(255, 255, 255, 0.6),
+          0 0 30px rgba(255, 255, 255, 0.4),
+          0 0 60px rgba(255, 255, 255, 0.2);
+      }
+      
+
 
 img {
     width: 150px;
 }
 .container .info{
     padding: relative;
-    z-index: 100;
+    z-index: 100px;
 }
 .container .info h1{
-    font-size: 40;
+    font-size: 40px;
     width: 50%;
     border-bottom: 1px solid var(--main-color);
     margin-bottom: 15px;
     padding-bottom: 10px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
 
 }
 .container .info p{
-    font-size: 18px;
+    font-size: 15px;
      margin-bottom: 10px;
      display: flex;
      align-items: center;
@@ -180,3 +210,13 @@ img {
 .active {
     color: #fff;
 }
+.amr {
+
+    font-size: 12px;
+    height: 10px; 
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-top: 15px;
+
+
+}
+
