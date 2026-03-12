@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap:https://ahmed-batran.vercel.app/sitemap.xml
+Sitemap: https://vercel.com/amrashry/medhat.com/sitemap.xml

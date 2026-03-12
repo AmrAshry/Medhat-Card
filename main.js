@@ -23,3 +23,12 @@ btn.addEventListener("click", () => {
     btn.innerHTML = "☀️";
   }
 });
+const profileImg = document.querySelector(".img img");
+
+profileImg.addEventListener("mouseenter", () => {
+  profileImg.classList.add("active");
+});
+
+profileImg.addEventListener("mouseleave", () => {
+  profileImg.classList.remove("active");
+});

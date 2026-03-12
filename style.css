@@ -32,7 +32,7 @@ a{
 .profile-card{
     position: relative;
     height: 100vh;
-    background-image: url(image/admin.2.jpg);
+    background-image: url(img/admin.2.jpg);
     background-size: cover;
     display: flex;
     justify-content: center;
@@ -179,44 +179,67 @@ img {
 .container .links a i{
     line-height: 40px;
     font-size: 40px;
-}
-@media(max-width: 767px){
-
-    .profile-card,
-    .profile-card::after{
-        height: 120vh;
-
+}@media (max-width: 768px) {
+    /* التعديلات هنا */
+    .card-container {
+        width: 90% !important; /* جرب إضافة important مؤقتاً للتأكد */
+        flex-direction: column;
     }
-    .container{
-        margin: 0 15px;
-    }
-    .container .img{
+  }
+
+    /* 2. ضبط الحاوية لتوسيط العناصر */
+    .container {
+        width: 90%; 
         position: relative;
         margin: 0 auto;
-        width: 250px;
-        height: 250px;
-        right: auto;
-        margin-bottom: 15px;
-    
+        padding: 30px 15px;
+        display: flex;
+        flex-direction: column; 
+        align-items: center;
+        text-align: center;
     }
-    .container .img img{
-        border-radius: 50%;
+
+    /* 3. إلغاء التموضع المطلق للصورة (نقطة حاسمة) */
+    .container .img {
+        position: relative; /* تغيير من absolute إلى relative */
+        top: 0 !important;
+        right: 0 !important;
+        margin: 0 auto 20px; /* توسيط الصورة */
+        width: 150px;
+        height: 150px;
     }
+
+    /* 4. تعديل النصوص */
+    .container .info {
+        width: 100%;
+        position: relative;
+    }
+
     .container .info h1 {
-        font-size: 25px;
+        font-size: 26px;
+        width: 100%; /* العرض بالكامل لضمان التوسيط */
+        border-bottom: 2px solid var(--main-color);
+        margin: 0 auto 20px;
+        padding-bottom: 10px;
     }
-} 
 
-.active {
-    color: #fff;
+    /* 5. ضبط الأيقونات والنصوص لتكون في سطر واحد متناسق */
+    .container .info p {
+        justify-content: center; 
+        font-size: 16px;
+        flex-direction: row; /* التأكد من أن الأيقونة بجانب النص */
+        margin-bottom: 15px;
+    }
+
+    .container .info p i {
+        padding-right: 10px;
+    }
+
+    /* 6. الروابط الاجتماعية */
+    .container .links {
+        width: 100%;
+        justify-content: center;
+        gap: 25px;
+        margin-top: 20px;
+    }
 }
-.amr {
-
-    font-size: 12px;
-    height: 10px; 
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    margin-top: 15px;
-
-
-}
-
